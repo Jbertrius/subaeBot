@@ -1,6 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 const ogs = require('open-graph-scraper');
 const firebase = require('firebase');
+const response_template = require('./response_template');
 
 // Bot config
 const token = '933543664:AAHlXom14HpHx-MaylG4C6dpq9WPBFSiGbk';
@@ -17,7 +18,7 @@ const app = firebase.initializeApp({
     appId: "1:649794681789:web:a11cf14416314f0c"
 });
 const ref = firebase.database().ref();
-const sitesRef = ref.child("sites");
+const sitesRef = ref.child("subae");
 
 let siteUrl;
 
@@ -40,6 +41,33 @@ bot.onText(/\/bookmark (.+)/, (msg, match) => {
       ]]
     }
   });
+});
+
+// Reply to /add
+bot.onText(/\/add/, (msg, match) => {
+
+  bot.sendMessage(msg.chat.id, response_template.answer_add).then(
+    (success) => {
+      bot.sendMessage(msg.chat.id, response_template.answer_add_3);
+    }
+  );
+
+});
+
+// Reply to /add
+bot.onText(/🎫New tool : ECA🎫/, (msg, match) => {
+
+  res = parse_form(msg.text)
+
+  sitesRef.child(res['indo'].toLowerCase()).push().set(res).then(
+    (success) => {
+      bot.sendMessage(msg.chat.id, res['name'] + ' ajouté!');
+    },
+    (error) => {
+      console.log(error)
+
+    }
+  )
 });
 
 // Callback query
@@ -70,3 +98,29 @@ bot.on("callback_query", (callbackQuery) => {
     }
   });
 });
+
+
+function parse_form( message) {
+  let header_list = ['name', 'indo', 'indo_com', 'date', 'place', 'phone']
+  let array = message.split('\n').filter( item => item.trim() ).filter( item => item.indexOf(':') != -1 )
+
+  let infos_list = array.map( item => {
+
+    return item.split(':')[1]
+  })
+
+  infos_list.shift()
+
+  var result = {};
+
+  if (header_list.length === infos_list.length) {
+    header_list.forEach((key, i) => result[key] = infos_list[i].trim());
+  }
+
+  return result
+
+  console.log(result)
+
+
+
+}
