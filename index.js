@@ -8,14 +8,14 @@ const token = '933543664:AAGVT6FjXMGfOuee6Pm2ID31gOo97piGXBg';
 const bot = new TelegramBot(token, {polling: true});
 
 // Init Firebase
-const app = firebase.initializeApp({
-    apiKey: "AIzaSyA5pP9-UaWFqN6bWhEL44Ni9_NWdLQNKFY",
-    authDomain: "cedar-freedom-138023.firebaseapp.com",
-    databaseURL: "https://cedar-freedom-138023.firebaseio.com",
-    projectId: "cedar-freedom-138023",
-    storageBucket: "cedar-freedom-138023.appspot.com",
-    messagingSenderId: "649794681789",
-    appId: "1:649794681789:web:a11cf14416314f0c"
+const app = firebase.initializeApp( {
+  apiKey: "AIzaSyCVXMWHyaNS__h31bfzQrHXbRpSGIWsCyw",
+  authDomain: "subae-a205b.firebaseapp.com",
+  databaseURL: "https://subae-a205b.firebaseio.com",
+  projectId: "subae-a205b",
+  storageBucket: "subae-a205b.appspot.com",
+  messagingSenderId: "43234043281",
+  appId: "1:43234043281:web:9697b312e89fb3fc"
 });
 const ref = firebase.database().ref();
 const sitesRef = ref.child("subae");
