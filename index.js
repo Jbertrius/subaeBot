@@ -5,7 +5,12 @@ const response_template = require('./response_template');
 
 // Bot config
 const token = '933543664:AAGVT6FjXMGfOuee6Pm2ID31gOo97piGXBg';
-const bot = new TelegramBot(token, {polling: true});
+const bot = new TelegramBot(token, {polling:  {
+                                                interval: 60,
+                                                autoStart: true,
+                                                
+                                              }
+                            });
 
 // Init Firebase
 const app = firebase.initializeApp( {
