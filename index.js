@@ -4,7 +4,7 @@ const firebase = require('firebase');
 const response_template = require('./response_template');
 
 // Bot config
-const token = '933543664:AAHlXom14HpHx-MaylG4C6dpq9WPBFSiGbk';
+const token = '933543664:AAGVT6FjXMGfOuee6Pm2ID31gOo97piGXBg';
 const bot = new TelegramBot(token, {polling: true});
 
 // Init Firebase
@@ -21,6 +21,11 @@ const ref = firebase.database().ref();
 const sitesRef = ref.child("subae");
 
 let siteUrl;
+'use strict';
+
+const server = require('http').createServer();
+
+server.listen(8000, () => console.log('localhost:8000'));
 
 // Reply to /bookmark
 bot.onText(/\/bookmark (.+)/, (msg, match) => {
@@ -124,3 +129,9 @@ function parse_form( message) {
 
 
 }
+
+
+exports.helloWorld = (req, res) => {
+  let message = req.query.message || req.body.message || 'Hello World!';
+  res.status(200).send(message);
+};
