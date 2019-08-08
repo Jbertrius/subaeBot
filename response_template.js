@@ -60,20 +60,32 @@ NAME :
 
 - Next meeting:`
 
-exports.answer_add_3 = `🎫New tool : ECA🎫
-
-[information]
+exports.answer_add_3 = `
+[Forwarded from Louis 승환]
+[Information]
  
-NAME : 
+🌸FRUIT NAME(age/genger) : 
  
 ■ Basic Information 
-- indo(+plus people who ran together): 
+- Indo(Principal Indo) : 
+- Date of : 
+- Phone: 
 
-- actual(person in charge of communication):
+■Personal Information 
+* Personality :
+* Interesting :
+- Religion : 
+- Nationality : 
+- Home location : 
+- Weekdays / Weekend :
+- Vacation :  
 
-- date of :  
+■Spiritual information  
+*Opportunity:  
+* Threat
+1. How much stick with church : 
+2. Own thought : 
 
-- place of : 
-
-- phone :
+■Friendship
+(TOPIC: interesting, major, school location, work, work location, need, translation, hobby)
 `
