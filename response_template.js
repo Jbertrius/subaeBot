@@ -61,7 +61,6 @@ NAME :
 - Next meeting:`
 
 exports.answer_add_3 = `
-[Forwarded from Louis 승환]
 [Information]
  
 🌸FRUIT NAME(age/genger) : 
@@ -71,7 +70,7 @@ exports.answer_add_3 = `
 - Date of : 
 - Phone: 
 
-■Personal Information 
+■ Personal Information 
 * Personality :
 * Interesting :
 - Religion : 
@@ -80,12 +79,12 @@ exports.answer_add_3 = `
 - Weekdays / Weekend :
 - Vacation :  
 
-■Spiritual information  
+■ Spiritual information  
 *Opportunity:  
 * Threat
 1. How much stick with church : 
 2. Own thought : 
 
-■Friendship
+■ Friendship
 (TOPIC: interesting, major, school location, work, work location, need, translation, hobby)
 `
