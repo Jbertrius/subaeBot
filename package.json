@@ -7,7 +7,6 @@
     "firebase": "^6.3.3",
     "node-telegram-bot-api": "^0.30.0",
     "now": "^15.8.7",
-    "open-graph-scraper": "^3.6.2",
     "webpack": "^4.38.0",
     "yarn": "^1.17.3"
   },
