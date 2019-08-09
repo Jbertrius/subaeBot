@@ -25,11 +25,6 @@ const ref = firebase.database().ref();
 const sitesRef = ref.child("subae");
 
 let siteUrl;
-'use strict';
-
-const server = require('http').createServer();
-
-server.listen(8000, () => console.log('localhost:8000'));
 
 // Reply to /bookmark
 bot.onText(/\/bookmark (.+)/, (msg, match) => {
